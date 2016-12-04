@@ -29,5 +29,4 @@ def prime_decompose(x):
         while x % p == 0:
             factors.append(p)
             x /= p
-    factors = list(sorted(factors))
     return factors
