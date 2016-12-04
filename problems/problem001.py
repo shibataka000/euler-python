@@ -2,6 +2,5 @@
 
 
 def solve():
-    ans = sum([i for i in range(1000)
-               if i % 3 == 0 or i % 5 == 0])
+    ans = sum(filter(lambda x: x % 3 == 0 or x % 5 == 0, range(1000)))
     return ans
