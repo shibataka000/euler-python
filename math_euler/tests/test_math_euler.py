@@ -37,3 +37,15 @@ def test_prime_decompose():
     assert math_euler.prime_decompose(10) == [2, 5]
     assert math_euler.prime_decompose(12) == [2, 2, 3]
     assert math_euler.prime_decompose(13195) == [5, 7, 13, 29]
+
+
+def test_gcd():
+    assert math_euler.gcd(2, 1) == 1
+    assert math_euler.gcd(2, 2) == 2
+    assert math_euler.gcd(2, 3) == 1
+    assert math_euler.gcd(2, 4) == 2
+
+
+def test_lcm():
+    assert math_euler.lcm(2, 3) == 6
+    assert math_euler.lcm(2, 4) == 4
