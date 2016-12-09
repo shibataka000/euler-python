@@ -29,7 +29,7 @@ def primes():
             mark_sieve(i, sieve)
             yield i
         i += 2
-        
+
 
 def prime_decompose(x):
     if x == 1:
