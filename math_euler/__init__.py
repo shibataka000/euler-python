@@ -9,15 +9,27 @@ def fibonacci():
 
 
 def primes():
-    yield 2
-    primes_list = [2]
-    n = 3
-    while True:
-        if all([n % p != 0 for p in primes_list]):
-            yield n
-            primes_list.append(n)
-        n += 2
+    def mark_sieve(prime, sieve):
+        i, l = 2 * prime, len(sieve)
+        while i < l:
+            sieve[i] = False
+            i += prime
 
+    yield 2
+    primes = [2]
+    sieve = [True]
+    i = 3
+    while True:
+        if i >= len(sieve):
+            sieve = [True] * (10 * len(sieve))
+            for p in primes:
+                mark_sieve(p, sieve)
+        if sieve[i]:
+            primes.append(i)
+            mark_sieve(i, sieve)
+            yield i
+        i += 2
+        
 
 def prime_decompose(x):
     if x == 1:
