@@ -1,5 +1,7 @@
 # coding: utf-8
 
+import itertools
+
 
 def fibonacci():
     a, b = 1, 2
@@ -18,8 +20,7 @@ def primes():
     yield 2
     primes = [2]
     sieve = [True]
-    i = 3
-    while True:
+    for i in itertools.count(3, 2):
         if i >= len(sieve):
             sieve = [True] * (10 * len(sieve))
             for p in primes:
@@ -28,7 +29,6 @@ def primes():
             primes.append(i)
             mark_sieve(i, sieve)
             yield i
-        i += 2
 
 
 def prime_decompose(x):
