@@ -1,6 +1,19 @@
 # coding: utf-8
 
-from math_euler import prime_decompose
+import math_euler
+
+
+def prime_decompose(x):
+    if x == 1:
+        return [1]
+    factors = []
+    for p in math_euler.primes():
+        if p > x:
+            break
+        while x % p == 0:
+            factors.append(p)
+            x /= p
+    return factors
 
 
 def solve():

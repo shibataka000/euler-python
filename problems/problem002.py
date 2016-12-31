@@ -2,7 +2,12 @@
 
 import itertools
 
-from math_euler import fibonacci
+
+def fibonacci():
+    a, b = 1, 2
+    while True:
+        yield a
+        a, b = b, a + b
 
 
 def solve():

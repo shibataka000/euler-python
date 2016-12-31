@@ -2,7 +2,18 @@
 
 from functools import reduce
 
-from math_euler import lcm
+
+def gcd(a, b):
+    if b > a:
+        return gcd(b, a)
+    elif b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+def lcm(a, b):
+    return int(a * b / gcd(a, b))
 
 
 def solve():
