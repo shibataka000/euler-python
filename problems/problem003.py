@@ -1,13 +1,13 @@
 # coding: utf-8
 
-import math_euler
+import math_ext
 
 
 def prime_decompose(x):
     if x == 1:
         return [1]
     factors = []
-    for p in math_euler.primes():
+    for p in math_ext.primes():
         if p > x:
             break
         while x % p == 0:

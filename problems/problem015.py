@@ -1,10 +1,10 @@
 # coding: utf-8
 
-import math_euler
+import math_ext
 
 
 def factorial(n):
-    return math_euler.product(range(1, n + 1))
+    return math_ext.product(range(1, n + 1))
 
 
 def solve():

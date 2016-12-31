@@ -2,7 +2,7 @@
 
 import itertools
 
-from math_euler import primes
+from math_ext import primes
 
 
 def solve():

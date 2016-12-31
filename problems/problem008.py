@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import math_euler
+import math_ext
 
 
 data = ("73167176531330624919225119674426574742355349194934"
@@ -31,6 +31,6 @@ def solve():
     for start in range(len(data)):
         target = data[start:start+step]
         target = map(lambda x: int(x), target)
-        val = math_euler.product(target)
+        val = math_ext.product(target)
         max_val = max(max_val, val)
     return max_val

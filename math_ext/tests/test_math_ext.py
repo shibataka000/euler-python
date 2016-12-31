@@ -2,11 +2,11 @@
 
 import itertools
 
-import math_euler
+import math_ext
 
 
 def test_primes():
-    primes_list = itertools.takewhile(lambda x: x <= 100, math_euler.primes())
+    primes_list = itertools.takewhile(lambda x: x <= 100, math_ext.primes())
     primes_list = list(primes_list)
     assert primes_list == [2, 3, 5, 7, 11, 13, 17, 19,
                            23, 29, 31, 37, 41, 43, 47,
