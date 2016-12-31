@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import itertools
+import functools
 
 
 def fibonacci():
@@ -55,3 +56,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     return int(a * b / gcd(a, b))
+
+
+def product(L):
+    return functools.reduce(lambda a, b: a * b, L)
