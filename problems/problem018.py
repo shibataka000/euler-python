@@ -24,7 +24,7 @@ def get_max_route_value(triangle):
         for row in triangle.rstrip().split("\n")
     ]
     for i in range(len(btree)-2, -1, -1):
-        for j in range(len(btree[i])):
+        for j, _ in enumerate(btree[i]):
             left = btree[i + 1][j]
             right = btree[i + 1][j + 1]
             btree[i][j] += max([left, right])

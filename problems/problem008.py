@@ -28,7 +28,7 @@ data = ("73167176531330624919225119674426574742355349194934"
 def solve():
     step = 13
     max_val = 0
-    for start in range(len(data)):
+    for start, _ in enumerate(data):
         target = data[start:start+step]
         target = map(lambda x: int(x), target)
         val = math_ext.product(target)
