@@ -16,6 +16,12 @@ def test_primes():
                            83, 89, 97]
 
 
+def test_product():
+    assert math_ext.product([1, 2, 3]) == 6
+    with pytest.raises(Exception):
+        math_ext.product([])
+
+
 def test_get_divisors():
     assert math_ext.get_divisors(1) == [1]
     assert math_ext.get_divisors(3) == [1, 3]
