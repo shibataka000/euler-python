@@ -31,3 +31,14 @@ def test_get_divisors():
     assert math_ext.get_divisors(15) == [1, 3, 5, 15]
     assert math_ext.get_divisors(21) == [1, 3, 7, 21]
     assert math_ext.get_divisors(28) == [1, 2, 4, 7, 14, 28]
+
+
+def test_get_true_divisors():
+    assert math_ext.get_true_divisors(1) == []
+    assert math_ext.get_true_divisors(3) == [1]
+    assert math_ext.get_true_divisors(6) == [1, 2, 3]
+    assert math_ext.get_true_divisors(9) == [1, 3]
+    assert math_ext.get_true_divisors(10) == [1, 2, 5]
+    assert math_ext.get_true_divisors(15) == [1, 3, 5]
+    assert math_ext.get_true_divisors(21) == [1, 3, 7]
+    assert math_ext.get_true_divisors(28) == [1, 2, 4, 7, 14]

@@ -44,3 +44,7 @@ def get_divisors(x):
                 return divisors + rest
             else:
                 divisors.append(i)
+
+
+def get_true_divisors(x):
+    return get_divisors(x)[:-1]

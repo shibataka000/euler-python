@@ -5,7 +5,7 @@ import math_ext
 
 def get_amicable_number(a):
     def d(n):
-        return sum(math_ext.get_divisors(n)[:-1])
+        return sum(math_ext.get_true_divisors(n))
 
     b = d(a)
     if a == b or b == 0:
