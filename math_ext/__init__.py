@@ -48,3 +48,10 @@ def get_divisors(x):
 
 def get_true_divisors(x):
     return get_divisors(x)[:-1]
+
+
+def fibonacci():
+    a, b = 1, 1
+    while True:
+        yield a
+        a, b = b, a + b

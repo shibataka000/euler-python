@@ -42,3 +42,17 @@ def test_get_true_divisors():
     assert math_ext.get_true_divisors(15) == [1, 3, 5]
     assert math_ext.get_true_divisors(21) == [1, 3, 7]
     assert math_ext.get_true_divisors(28) == [1, 2, 4, 7, 14]
+
+
+def test_fibonacci():
+    fib = math_ext.fibonacci()
+    assert next(fib) == 1
+    assert next(fib) == 1
+    assert next(fib) == 2
+    assert next(fib) == 3
+    assert next(fib) == 5
+    assert next(fib) == 8
+    assert next(fib) == 13
+    assert next(fib) == 21
+    assert next(fib) == 34
+    assert next(fib) == 55
