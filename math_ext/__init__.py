@@ -55,3 +55,12 @@ def fibonacci():
     while True:
         yield a
         a, b = b, a + b
+
+
+def is_prime(p):
+    if p <= 1:
+        return False
+    elif p == 2:
+        return True
+    else:
+        return (2 ** (p - 1)) % p == 1

@@ -56,3 +56,18 @@ def test_fibonacci():
     assert next(fib) == 21
     assert next(fib) == 34
     assert next(fib) == 55
+
+
+def is_prime():
+    assert not math_ext.is_prime(-1)
+    assert not math_ext.is_prime(0)
+    assert not math_ext.is_prime(1)
+    assert math_ext.is_prime(2)
+    assert math_ext.is_prime(3)
+    assert not math_ext.is_prime(4)
+    assert math_ext.is_prime(5)
+    assert not math_ext.is_prime(6)
+    assert math_ext.is_prime(7)
+    assert not math_ext.is_prime(8)
+    assert not math_ext.is_prime(9)
+    assert not math_ext.is_prime(10)
