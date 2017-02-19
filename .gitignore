@@ -1,3 +1,4 @@
 *.pyc
 .cache
 .python-version
+*_flymake.py
