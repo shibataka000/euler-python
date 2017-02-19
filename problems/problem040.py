@@ -22,4 +22,3 @@ def solve():
     return math_ext.product(
         [nth(champernownes_constant(), 10 ** i - 1) for i in range(7)]
     )
-         
