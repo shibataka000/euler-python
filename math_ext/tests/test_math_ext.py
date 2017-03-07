@@ -58,7 +58,7 @@ def test_fibonacci():
     assert next(fib) == 55
 
 
-def is_prime():
+def test_is_prime():
     assert not math_ext.is_prime(-1)
     assert not math_ext.is_prime(0)
     assert not math_ext.is_prime(1)
