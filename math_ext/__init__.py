@@ -64,3 +64,9 @@ def is_prime(p):
         return True
     else:
         return (2 ** (p - 1)) % p == 1
+
+
+def pandigital(n):
+    seed = "".join([str(i) for i in range(1, n + 1)])
+    for x in itertools.permutations(seed):
+        yield int("".join(x))

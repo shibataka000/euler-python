@@ -1,9 +1,10 @@
 # coding: utf-8
 
-import itertools
+import math_ext
 
 
 def decompose_pandigital_product(x):
+    x = str(x)
     c = int("".join(x[5:9]))
     for i in range(1, 5):
         a = int("".join(x[:i]))
@@ -14,5 +15,5 @@ def decompose_pandigital_product(x):
 
 def solve():
     L = [decompose_pandigital_product(x)
-         for x in itertools.permutations("123456789")]
+         for x in math_ext.pandigital(9)]
     return sum(set([x[2] for x in L if x is not None]))
