@@ -70,3 +70,9 @@ def pandigital(n):
     seed = "".join([str(i) for i in range(1, n + 1)])
     for x in itertools.permutations(seed):
         yield int("".join(x))
+
+
+def is_pandigital(n):
+    str_n = str(n)
+    assert 1 <= len(str_n) <= 9
+    return {int(c) for c in str_n} == {i for i in range(1, len(str_n) + 1)}
