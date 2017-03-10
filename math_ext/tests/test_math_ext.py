@@ -80,9 +80,3 @@ def test_pandigital():
               4123, 4132, 4213, 4231, 4312, 4321]
     actual = list(math_ext.pandigital(4))
     assert expect == actual
-
-
-def test_is_pandigital():
-    assert math_ext.is_pandigital(123456789)
-    assert math_ext.is_pandigital(932718654)
-    assert not math_ext.is_pandigital(111111111)

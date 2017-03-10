@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import math_ext
+
+def is_pandigital_number(n):
+    return {int(c) for c in str(n)} == {i for i in range(1, 10)}
 
 
 def solve():
@@ -11,5 +13,5 @@ def solve():
             L += str(n * i)
             i += 1
         m = int("".join(L))
-        if math_ext.is_pandigital(m):
+        if is_pandigital_number(m):
             return m
