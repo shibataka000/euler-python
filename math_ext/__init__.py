@@ -58,10 +58,13 @@ def fibonacci():
 
 
 def is_prime(p):
+    primes = [2, 3, 5, 7]
     if p <= 1:
         return False
-    elif p == 2:
+    elif p in primes:
         return True
+    elif any([p % i == 0 for i in primes]):
+        return False
     else:
         return (2 ** (p - 1)) % p == 1
 
