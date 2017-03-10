@@ -74,3 +74,11 @@ def pandigital(n):
     seed = "".join([str(i) for i in range(1, n + 1)])
     for x in itertools.permutations(seed):
         yield int("".join(x))
+
+
+def odd(x):
+    return x % 2 == 1
+
+
+def even(x):
+    return x % 2 == 0

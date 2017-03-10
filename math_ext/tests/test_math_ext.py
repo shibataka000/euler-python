@@ -80,3 +80,15 @@ def test_pandigital():
               4123, 4132, 4213, 4231, 4312, 4321]
     actual = list(math_ext.pandigital(4))
     assert expect == actual
+
+
+def test_odd():
+    assert math_ext.odd(-1)
+    assert not math_ext.odd(0)
+    assert math_ext.odd(1)
+
+
+def test_even():
+    assert not math_ext.even(-1)
+    assert math_ext.even(0)
+    assert not math_ext.even(1)
