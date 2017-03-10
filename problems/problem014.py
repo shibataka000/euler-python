@@ -1,10 +1,12 @@
 # coding: utf-8
 
+import math_ext
+
 
 def collatz(n):
     yield n
     while n != 1:
-        if n % 2 == 0:
+        if math_ext.even(n):
             n = n / 2
         else:
             n = 3 * n + 1
