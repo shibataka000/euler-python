@@ -8,7 +8,7 @@ import itertools_ext
 
 def solve():
     seq = range(9, 0, -1)
-    seq = map(math_ext.pandigital, seq)
+    seq = map(lambda n: math_ext.pandigital(range(1, n + 1)), seq)
     seq = map(sorted, seq)
     seq = map(reversed, seq)
     seq = itertools.chain.from_iterable(seq)

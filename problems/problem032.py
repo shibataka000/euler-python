@@ -15,5 +15,5 @@ def decompose_pandigital_product(x):
 
 def solve():
     L = [decompose_pandigital_product(x)
-         for x in math_ext.pandigital(9)]
+         for x in math_ext.pandigital(range(1, 10))]
     return sum(set([x[2] for x in L if x is not None]))
