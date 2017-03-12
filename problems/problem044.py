@@ -10,8 +10,8 @@ def nth_pentagonal_number(n):
 
 
 def is_pentagonal_number(n):
-    i = int((1 + math.sqrt(1 + 24 * n)) / 6)
-    return nth_pentagonal_number(i) == n
+    i = (1 + math.sqrt(1 + 24 * n)) / 6
+    return i.is_integer()
 
 
 def solve():
