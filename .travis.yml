@@ -6,3 +6,5 @@ install:
 script:
   - "flake8 ."
   - "py.test . --durations=10"
+notifications:
+  email: false
