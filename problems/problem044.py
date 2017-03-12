@@ -21,7 +21,7 @@ def solve():
         b = nth_pentagonal_number(i - 1)
         if ans and a - b > ans:
             return ans
-        for j in range(i - 2, 0, -1):
+        for j in range(i - 1, 0, -1):
             b = nth_pentagonal_number(j)
             if ans and a - b > ans:
                 break
