@@ -81,3 +81,7 @@ def odd(x):
 
 def even(x):
     return x % 2 == 0
+
+
+def triangular():
+    return map(lambda n: n * (n + 1) / 2, itertools.count(1))

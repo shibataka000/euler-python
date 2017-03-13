@@ -92,3 +92,10 @@ def test_even():
     assert not math_ext.even(-1)
     assert math_ext.even(0)
     assert not math_ext.even(1)
+
+
+def test_triangular():
+    seq = math_ext.triangular()
+    expect = [1, 3, 6, 10, 15]
+    actual = [next(seq) for i in range(len(expect))]
+    assert expect == actual

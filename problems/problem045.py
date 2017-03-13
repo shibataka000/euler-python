@@ -2,9 +2,7 @@
 
 import itertools
 
-
-def triangular():
-    return map(lambda n: n * (n + 1) / 2, itertools.count(1))
+from math_ext import triangular
 
 
 def pentagonal():
