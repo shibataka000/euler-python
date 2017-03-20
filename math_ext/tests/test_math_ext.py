@@ -94,6 +94,13 @@ def test_even():
     assert not math_ext.even(1)
 
 
+def test_pentagonal():
+    seq = math_ext.pentagonal()
+    expect = [1, 5, 12, 22, 35, 51, 70, 92, 117, 145]
+    actual = [next(seq) for i in range(len(expect))]
+    assert expect == actual
+
+
 def test_triangular():
     seq = math_ext.triangular()
     expect = [1, 3, 6, 10, 15]

@@ -2,7 +2,7 @@
 
 import math
 
-import itertools
+import math_ext
 
 
 def is_pentagonal_number(n):
@@ -10,14 +10,9 @@ def is_pentagonal_number(n):
     return i.is_integer()
 
 
-def pentagonal():
-    for n in itertools.count(1):
-        yield int(n * (3 * n - 1) / 2)
-
-
 def solve():
-    for a in pentagonal():
-        for b in pentagonal():
+    for a in math_ext.pentagonal():
+        for b in math_ext.pentagonal():
             if a - b <= 0:
                 break
             if is_pentagonal_number(a - b) and is_pentagonal_number(a + b):
