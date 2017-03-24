@@ -3,7 +3,7 @@
 import problems.problem028 as problem
 
 
-def corners():
+def test_corners():
     corn = problem.corners()
     assert next(corn) == 1
     assert next(corn) == 3

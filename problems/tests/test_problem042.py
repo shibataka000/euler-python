@@ -10,7 +10,7 @@ def test_is_square_root_of_number():
                 for n in [2, 3, 5, 6, 7, 8]])
 
 
-def is_triangular_number():
+def test_is_triangular_number():
     trianglar_number = [1, 2, 6, 10, 15, 21, 28, 36, 45]
     for i in range(46):
         if i in trianglar_number:
