@@ -6,5 +6,8 @@ install:
 script:
   - "flake8 ."
   - "py.test ."
+after_script:
+  - "coveralls"
+  - "codecov"
 notifications:
   email: false
