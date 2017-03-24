@@ -23,7 +23,7 @@ def composite_numbers():
 
 def odd_composite_numbers():
     return filter(math_ext.odd, composite_numbers())
-    
+
 
 def solve():
     return itertools_ext.find(
