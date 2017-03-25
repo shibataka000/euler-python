@@ -4,8 +4,7 @@ python:
 install:
   - "pip install -r test-requirements.txt"
 script:
-  - "flake8 ."
-  - "py.test ."
+  - "py.test --cov"
 after_script:
   - "coveralls"
   - "codecov"
