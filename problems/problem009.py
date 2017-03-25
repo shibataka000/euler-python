@@ -10,6 +10,6 @@ def solve():
     [(a, b, c)] = [(a, b, 1000 - a - b)
                    for a in range(1, 1001)
                    for b in range(a, 1001)
-                   if 1000 - a - b > b
-                   and is_pythagoras_number(a, b, 1000 - a - b)]
+                   if 1000 - a - b > b and
+                   is_pythagoras_number(a, b, 1000 - a - b)]
     return a * b * c

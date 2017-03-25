@@ -29,7 +29,7 @@ def solve():
     step = 13
     max_val = 0
     for start, _ in enumerate(data):
-        target = data[start:start+step]
+        target = data[start:start + step]
         target = map(lambda x: int(x), target)
         val = math_ext.product(target)
         max_val = max(max_val, val)

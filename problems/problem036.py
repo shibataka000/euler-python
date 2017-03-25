@@ -14,5 +14,5 @@ def reverse(n):
 
 def solve():
     return sum([i for i in range(1, 1000000, 2)
-                if i == reverse(i)
-                and binary(i) == reverse(binary(i))])
+                if i == reverse(i) and
+                binary(i) == reverse(binary(i))])
