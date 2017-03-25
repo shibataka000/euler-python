@@ -11,8 +11,8 @@ def test_is_square_root_of_number():
 
 
 def test_is_triangular_number():
-    trianglar_number = [1, 2, 6, 10, 15, 21, 28, 36, 45]
-    for i in range(46):
+    trianglar_number = [1, 3, 6, 10, 15, 21, 28, 36, 45]
+    for i in range(1, 46):
         if i in trianglar_number:
             assert problem.is_triangular_number(i)
         else:
