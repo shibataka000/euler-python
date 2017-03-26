@@ -3,31 +3,47 @@
 import math_ext
 
 
-def get_replaced_primes(prime):
-    def get_digit_replaced_primes(prime, n):
-        str_prime, str_n = str(prime), str(n)
-        rps = []
-        if str_n not in str_prime:
-            return [prime]
-        for i in range(10):
-            str_i = str(i)
-            str_rp = str_prime.replace(str_n, str_i)
-            rp = int(str_rp)
-            if math_ext.is_prime(rp) and not str_rp.startswith("0"):
-                rps.append(rp)
-        return rps
+def get_replaced_numbers(number, src):
+    str_number, str_src = str(number), str(src)
+    replaced_numbers = []
+    if str_src not in str_number:
+        return [number]
+    for i in range(10):
+        str_replaced_number = str_number.replace(str_src, str(i))
+        if str_replaced_number.startswith("0"):
+            continue
+        replaced_number = int(str_replaced_number)
+        replaced_numbers.append(replaced_number)
+    return replaced_numbers
 
-    replaced_primes = [get_digit_replaced_primes(prime, i)
-                       for i in range(10)]
-    return max(replaced_primes, key=lambda x: len(x))
+
+def get_all_replaced_numbers(number):
+    replaced_numbers = []
+    for i in range(10):
+        replaced_numbers += get_replaced_numbers(number, i)
+    replaced_numbers = list(sorted(list(set(replaced_numbers))))
+    return replaced_numbers
+
+
+def has_number_of_primes(numbers, prime_count):
+    threashold = len(numbers) - prime_count
+    for n in numbers:
+        if not math_ext.is_prime(n):
+            threashold -= 1
+        if threashold < 0:
+            return False
+    return True
+
+
+def has_number_of_replaced_primes(prime, prime_count):
+    for i in range(10):
+        replaced_numbers = get_replaced_numbers(prime, i)
+        if has_number_of_primes(replaced_numbers, prime_count):
+            return True
+    return False
 
 
 def solve():
-    cache = []
     for p in math_ext.primes():
-        if p in cache:
-            continue
-        replaced_primes = get_replaced_primes(p)
-        cache += replaced_primes
-        if len(replaced_primes) == 8:
+        if has_number_of_replaced_primes(p, 8):
             return p
