@@ -7,6 +7,5 @@ script:
   - "py.test --cov ."
 after_script:
   - "coveralls"
-  - "codecov"
 notifications:
   email: false
