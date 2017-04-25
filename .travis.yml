@@ -4,7 +4,7 @@ python:
 install:
   - "pip install -r test-requirements.txt"
 script:
-  - "py.test --cov --durations=10 ."
+  - "py.test --cov --durations=100 ."
 after_script:
   - "coveralls"
 notifications:
