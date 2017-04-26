@@ -106,3 +106,9 @@ def test_triangular():
     expect = [1, 3, 6, 10, 15]
     actual = [next(seq) for i in range(len(expect))]
     assert expect == actual
+
+
+def test_is_palindromic_number():
+    assert math_ext.is_palindromic_number(1) is True
+    assert math_ext.is_palindromic_number(9009) is True
+    assert math_ext.is_palindromic_number(9008) is False

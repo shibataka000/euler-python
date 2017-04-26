@@ -91,3 +91,9 @@ def pentagonal():
 def triangular():
     for n in itertools.count(1):
         yield int(n * (n + 1) / 2)
+
+
+def is_palindromic_number(x):
+    a = str(x)
+    b = str(x)[::-1]
+    return a == b
