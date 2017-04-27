@@ -2,6 +2,7 @@
 
 import itertools
 import functools
+import random
 
 
 def primes():
@@ -65,8 +66,20 @@ def is_prime(p):
         return True
     elif any([p % i == 0 for i in primes]):
         return False
+    elif pow(2, p - 1, p) != 1:
+        return False
     else:
-        return (2 ** (p - 1)) % p == 1
+        n, s = p, 1
+        while (n - 1) % (2 ** s) != 0:
+            s += 1
+        d = (n - 1) // (2 ** s)
+        for i in range(50):
+            a = random.randint(1, n - 1)
+            b1 = pow(a, d, n) != 1
+            b2 = all([pow(a, (2 ** r) * d, n) != n - 1 for r in range(s)])
+            if b1 and b2:
+                return False
+        return True
 
 
 def pandigital(L):

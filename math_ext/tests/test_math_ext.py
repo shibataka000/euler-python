@@ -72,6 +72,12 @@ def test_is_prime():
     assert not math_ext.is_prime(9)
     assert not math_ext.is_prime(10)
 
+    pseudo_primes = [
+        341, 561, 645, 1105, 1387, 1729, 1905, 2047, 2465, 2701, 2821,
+        3277, 4033, 4369, 4371, 4681, 5461, 6601, 7957, 8321, 8481, 8911
+    ]
+    assert all([not math_ext.is_prime(n) for n in pseudo_primes])
+
 
 def test_pandigital():
     expect = [1234, 1243, 1324, 1342, 1423, 1432,
