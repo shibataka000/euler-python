@@ -112,3 +112,20 @@ def test_is_palindromic_number():
     assert math_ext.is_palindromic_number(1) is True
     assert math_ext.is_palindromic_number(9009) is True
     assert math_ext.is_palindromic_number(9008) is False
+
+
+def test_corners():
+    corn = math_ext.corners()
+    assert next(corn) == 1
+    assert next(corn) == 3
+    assert next(corn) == 5
+    assert next(corn) == 7
+    assert next(corn) == 9
+    assert next(corn) == 13
+    assert next(corn) == 17
+    assert next(corn) == 21
+    assert next(corn) == 25
+    assert next(corn) == 31
+    assert next(corn) == 37
+    assert next(corn) == 43
+    assert next(corn) == 49

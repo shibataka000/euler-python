@@ -97,3 +97,14 @@ def is_palindromic_number(x):
     a = str(x)
     b = str(x)[::-1]
     return a == b
+
+
+def corners():
+    n = 1
+    yield n
+    step = 2
+    while True:
+        for i in range(4):
+            n += step
+            yield n
+        step += 2

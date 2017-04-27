@@ -2,18 +2,9 @@
 
 import itertools
 
-
-def corners():
-    n = 1
-    yield n
-    step = 2
-    while True:
-        for i in range(4):
-            n += step
-            yield n
-        step += 2
+import math_ext
 
 
 def solve():
-    L = itertools.islice(corners(), 1000 * 2 + 1)
+    L = itertools.islice(math_ext.corners(), 1000 * 2 + 1)
     return sum(L)
