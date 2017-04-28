@@ -58,7 +58,7 @@ def fibonacci():
         a, b = b, a + b
 
 
-def is_prime(p):
+def is_prime(p, k=1):
     primes = [2, 3, 5, 7]
     if p <= 1:
         return False
@@ -73,7 +73,7 @@ def is_prime(p):
         while (n - 1) % (2 ** s) != 0:
             s += 1
         d = (n - 1) // (2 ** s)
-        for i in range(50):
+        for i in range(k):
             a = random.randint(1, n - 1)
             b1 = pow(a, d, n) != 1
             b2 = all([pow(a, (2 ** r) * d, n) != n - 1 for r in range(s)])

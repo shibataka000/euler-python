@@ -9,7 +9,7 @@ def solve():
     corners, primes = [], []
     for n in math_ext.corners():
         corners.append(n)
-        if math_ext.is_prime(n):
+        if math_ext.is_prime(n, k=50):
             primes.append(n)
         if (len(corners) - 1) % 4 == 0 and len(corners) > 2:
             if len(primes) / len(corners) < 0.1:
