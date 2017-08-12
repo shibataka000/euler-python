@@ -9,11 +9,18 @@ def is_prime_pair(p1, p2):
     return math_ext.is_prime(p3) and math_ext.is_prime(p4)
 
 
+def is_prime_pair_set(new_p, prime_pair_set):
+    for p in prime_pair_set:
+        if not is_prime_pair(new_p, p):
+            return False
+    return True
+
+
 def solve():
     prime_pair_sets = []
     for new_p in math_ext.primes():
         for prime_pair_set in prime_pair_sets:
-            if all([is_prime_pair(p, new_p) for p in prime_pair_set]):
+            if is_prime_pair_set(new_p, prime_pair_set):
                 new_prime_pair_set = (new_p,) + prime_pair_set
                 if len(new_prime_pair_set) == 5:
                     return sum(new_prime_pair_set)
