@@ -58,7 +58,7 @@ def fibonacci():
         a, b = b, a + b
 
 
-def is_prime(p, k=1):
+def is_prime(p, k=0):
     primes = [2, 3, 5, 7]
     if p <= 1:
         return False
@@ -68,7 +68,7 @@ def is_prime(p, k=1):
         return False
     elif pow(2, p - 1, p) != 1:
         return False
-    else:
+    elif k >= 1:
         n, s = p, 1
         while (n - 1) % (2 ** s) != 0:
             s += 1
@@ -79,6 +79,8 @@ def is_prime(p, k=1):
             b2 = all([pow(a, (2 ** r) * d, n) != n - 1 for r in range(s)])
             if b1 and b2:
                 return False
+        return True
+    else:
         return True
 
 

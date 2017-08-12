@@ -76,7 +76,7 @@ def test_is_prime():
         341, 561, 645, 1105, 1387, 1729, 1905, 2047, 2465, 2701, 2821,
         3277, 4033, 4369, 4371, 4681, 5461, 6601, 7957, 8321, 8481, 8911
     ]
-    assert all([not math_ext.is_prime(n) for n in pseudo_primes])
+    assert all([not math_ext.is_prime(n, k=50) for n in pseudo_primes])
 
 
 def test_pandigital():
